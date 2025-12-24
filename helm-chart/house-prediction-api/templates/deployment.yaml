@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: house-prediction-deployment
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    meta.helm.sh/release-name: house-prediction-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: house-prediction-app
+  template:
+    metadata:
+      labels:
+        app: house-prediction-app
+    spec:
+      containers:
+        - name: house-prediction-api-container
+          image: "{{ $.Values.image.name }}:{{ $.Values.image.tag }}"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5001

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: house-prediction-service
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    meta.helm.sh/release-name: house-prediction-api
+spec:
+  type: LoadBalancer
+  selector:
+    app: house-prediction-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 5001
