@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+scikit-learn = "*"
+sklearn = "*"
+flask = "*"
+joblib = "*"
+
+[dev-packages]
+flake8 = "*"
+mypy = "*"
+isort = "*"
+black = "*"
+
+[requires]
+python_version = "3.10"
+python_full_version = "3.10.2"

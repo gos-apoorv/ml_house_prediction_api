@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .           # where the Dockerfile is
+      dockerfile: Dockerfile
+    image: house_price_prediction_api:latest   # optional explicit tag for the built image
+    ports:
+      - "5001:5001"        # host:container
+    environment:
+      - APP_ENV=dev
