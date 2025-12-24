@@ -1,0 +1,6 @@
+---
+apiVersion: v2
+description: Helm chart to deploy a service that hosts house prediction api
+name: house-prediction-api
+type: application
+version: 0.0.1

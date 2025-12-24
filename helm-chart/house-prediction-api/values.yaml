@@ -1,0 +1,5 @@
+---
+image:
+  name: house_price_prediction_api
+  tag: latest
+createNamespace: false
